@@ -35,7 +35,8 @@ First, the dataset for each year is provided as 2 excel files, transaction data 
 <b>Correlation Matrices performed by teammate: </b><br>
 Second, we test our data for correlation. Below is a heatmap showing correlation between all 58 variables.
 
-<img src="/images/image001.png>
+
+<div align=center><img src="/images/image001.png"></div>
 
 Programmatically, we identify and remove variables that have correlation of greater than 0.9 and less than -0.9.
 
