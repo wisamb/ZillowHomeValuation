@@ -32,7 +32,9 @@ We then proceed with model analysis by splitting the data into training (67%) an
 
 First, the dataset for each year is provided as 2 excel files, transaction data and property attributes. In order to work with the data, we combine the 2 excel files for each year by parcel id. Immediately, our dataset is reduced to 167,888 rows. This is due to the fact that there is far fewer transaction data than property data. 
 
-<b>Correlation Matrices performed by teammate: </b><br>
+### Correlation Matrices 
+<i>(performed by teammate)</i>
+  
 Second, we test our data for correlation. Below is a heatmap showing correlation between all 58 variables.
 
 
@@ -40,6 +42,7 @@ Second, we test our data for correlation. Below is a heatmap showing correlation
 
 Programmatically, we identify and remove variables that have correlation of greater than 0.9 and less than -0.9.
 
+<div align=center>
 <table>
   <tr>
     <th>Variable1</th>
@@ -112,3 +115,11 @@ Programmatically, we identify and remove variables that have correlation of grea
     <td>0.95</td>
   </tr>
 </table>
+</div>
+
+After removing highly correlated values, there are 47 variables as shown in the heatmap below.
+
+<div align=center><img src="/images/image002.png"></div>
+
+<b>Imputation of Missing Values</b><br>
+
