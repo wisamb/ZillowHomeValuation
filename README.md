@@ -37,9 +37,9 @@ Second, we test our data for correlation. Below is a heatmap showing correlation
 
 <div align=center><img src="/images/image001.png"></div>
 
-Using Python, we identified and removed variables that have correlation of greater than 0.9 and less than -0.9.
+Programmatically, we identify and remove variables that have correlation of greater than 0.9 and less than -0.9.
 
-<table class=a border=1 cellspacing=0 cellpadding=0 width=326 style='border-collapse:
+<table class=a border=1 cellspacing=0 cellpadding=0 style='border-collapse:
  collapse;border:none'>
  <tr style='height:20.0pt'>
   <td width=139 style='width:103.9pt;border:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
