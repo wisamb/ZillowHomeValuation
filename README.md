@@ -35,390 +35,75 @@ First, the dataset for each year is provided as 2 excel files, transaction data 
 <b>Correlation Matrices performed by teammate: </b><br>
 Second, we test our data for correlation. Below is a heatmap showing correlation between all 58 variables.
 
-<div align=center><img src="/images/image001.png"></div>
-
-Programmatically, we identify and remove variables that have correlation of greater than 0.9 and less than -0.9.
-
-<div align=center>
-
-<table class=a border=1 cellspacing=0 cellpadding=0 width=326 style='border-collapse:
- collapse;border:none'>
- <tr style='height:20.0pt'>
-  <td width=139 style='width:103.9pt;border:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:20.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><b><span lang=EN
-  style='font-family:"Calibri",sans-serif'>Variable1</span></b></p>
-  </div>
-  </td>
-  <td width=143 style='width:107.25pt;border:solid black 1.0pt;border-left:
-  none;padding:5.0pt 5.0pt 5.0pt 5.0pt;height:20.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><b><span lang=EN
-  style='font-family:"Calibri",sans-serif'>Variable2</span></b></p>
-  </div>
-  </td>
-  <td width=44 style='width:33.15pt;border:solid black 1.0pt;border-left:none;
-  padding:5.0pt 5.0pt 5.0pt 5.0pt;height:20.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal align=center style='text-align:center;line-height:normal;
-  border:none;padding:0in'><b><span lang=EN style='font-family:"Calibri",sans-serif'>Corr</span></b></p>
-  </div>
-  </td>
- </tr>
- <tr style='height:26.0pt'>
-  <td width=139 style='width:103.9pt;border:solid black 1.0pt;border-top:none;
-  padding:5.0pt 5.0pt 5.0pt 5.0pt;height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'>calculatedbathnbr </span></p>
-  </div>
-  </td>
-  <td width=143 style='width:107.25pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'> bathroomcnt </span></p>
-  </div>
-  </td>
-  <td width=44 style='width:33.15pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal align=center style='text-align:center;line-height:normal;
-  border:none;padding:0in'><span lang=EN style='font-family:"Calibri",sans-serif'>1.0</span></p>
-  </div>
-  </td>
- </tr>
- <tr style='height:26.0pt'>
-  <td width=139 style='width:103.9pt;border:solid black 1.0pt;border-top:none;
-  padding:5.0pt 5.0pt 5.0pt 5.0pt;height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'>finishedsquarefeet13 </span></p>
-  </div>
-  </td>
-  <td width=143 style='width:107.25pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'> calculatedfinishedsquarefeet </span></p>
-  </div>
-  </td>
-  <td width=44 style='width:33.15pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal align=center style='text-align:center;line-height:normal;
-  border:none;padding:0in'><span lang=EN style='font-family:"Calibri",sans-serif'>1.0</span></p>
-  </div>
-  </td>
- </tr>
- <tr style='height:26.0pt'>
-  <td width=139 style='width:103.9pt;border:solid black 1.0pt;border-top:none;
-  padding:5.0pt 5.0pt 5.0pt 5.0pt;height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'>finishedsquarefeet15 </span></p>
-  </div>
-  </td>
-  <td width=143 style='width:107.25pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'> calculatedfinishedsquarefeet </span></p>
-  </div>
-  </td>
-  <td width=44 style='width:33.15pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal align=center style='text-align:center;line-height:normal;
-  border:none;padding:0in'><span lang=EN style='font-family:"Calibri",sans-serif'>1.0</span></p>
-  </div>
-  </td>
- </tr>
- <tr style='height:26.0pt'>
-  <td width=139 style='width:103.9pt;border:solid black 1.0pt;border-top:none;
-  padding:5.0pt 5.0pt 5.0pt 5.0pt;height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'>finishedsquarefeet15 </span></p>
-  </div>
-  </td>
-  <td width=143 style='width:107.25pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'> finishedsquarefeet12 </span></p>
-  </div>
-  </td>
-  <td width=44 style='width:33.15pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal align=center style='text-align:center;line-height:normal;
-  border:none;padding:0in'><span lang=EN style='font-family:"Calibri",sans-serif'>1.0</span></p>
-  </div>
-  </td>
- </tr>
- <tr style='height:26.0pt'>
-  <td width=139 style='width:103.9pt;border:solid black 1.0pt;border-top:none;
-  padding:5.0pt 5.0pt 5.0pt 5.0pt;height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'>finishedsquarefeet50 </span></p>
-  </div>
-  </td>
-  <td width=143 style='width:107.25pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'> finishedfloor1squarefeet </span></p>
-  </div>
-  </td>
-  <td width=44 style='width:33.15pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal align=center style='text-align:center;line-height:normal;
-  border:none;padding:0in'><span lang=EN style='font-family:"Calibri",sans-serif'>0.97</span></p>
-  </div>
-  </td>
- </tr>
- <tr style='height:26.0pt'>
-  <td width=139 style='width:103.9pt;border:solid black 1.0pt;border-top:none;
-  padding:5.0pt 5.0pt 5.0pt 5.0pt;height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'>finishedsquarefeet6 </span></p>
-  </div>
-  </td>
-  <td width=143 style='width:107.25pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'> calculatedfinishedsquarefeet </span></p>
-  </div>
-  </td>
-  <td width=44 style='width:33.15pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal align=center style='text-align:center;line-height:normal;
-  border:none;padding:0in'><span lang=EN style='font-family:"Calibri",sans-serif'>1.0</span></p>
-  </div>
-  </td>
- </tr>
- <tr style='height:26.0pt'>
-  <td width=139 style='width:103.9pt;border:solid black 1.0pt;border-top:none;
-  padding:5.0pt 5.0pt 5.0pt 5.0pt;height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'>fullbathcnt </span></p>
-  </div>
-  </td>
-  <td width=143 style='width:107.25pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'> bathroomcnt </span></p>
-  </div>
-  </td>
-  <td width=44 style='width:33.15pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal align=center style='text-align:center;line-height:normal;
-  border:none;padding:0in'><span lang=EN style='font-family:"Calibri",sans-serif'>0.99</span></p>
-  </div>
-  </td>
- </tr>
- <tr style='height:26.0pt'>
-  <td width=139 style='width:103.9pt;border:solid black 1.0pt;border-top:none;
-  padding:5.0pt 5.0pt 5.0pt 5.0pt;height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'>fullbathcnt </span></p>
-  </div>
-  </td>
-  <td width=143 style='width:107.25pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'> calculatedbathnbr </span></p>
-  </div>
-  </td>
-  <td width=44 style='width:33.15pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal align=center style='text-align:center;line-height:normal;
-  border:none;padding:0in'><span lang=EN style='font-family:"Calibri",sans-serif'>0.99</span></p>
-  </div>
-  </td>
- </tr>
- <tr style='height:26.0pt'>
-  <td width=139 style='width:103.9pt;border:solid black 1.0pt;border-top:none;
-  padding:5.0pt 5.0pt 5.0pt 5.0pt;height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'>poolsizesum </span></p>
-  </div>
-  </td>
-  <td width=143 style='width:107.25pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'> finishedsquarefeet15 </span></p>
-  </div>
-  </td>
-  <td width=44 style='width:33.15pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal align=center style='text-align:center;line-height:normal;
-  border:none;padding:0in'><span lang=EN style='font-family:"Calibri",sans-serif'>0.91</span></p>
-  </div>
-  </td>
- </tr>
- <tr style='height:26.0pt'>
-  <td width=139 style='width:103.9pt;border:solid black 1.0pt;border-top:none;
-  padding:5.0pt 5.0pt 5.0pt 5.0pt;height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'>rawcensustractandblock </span></p>
-  </div>
-  </td>
-  <td width=143 style='width:107.25pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'> fips </span></p>
-  </div>
-  </td>
-  <td width=44 style='width:33.15pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal align=center style='text-align:center;line-height:normal;
-  border:none;padding:0in'><span lang=EN style='font-family:"Calibri",sans-serif'>1.0</span></p>
-  </div>
-  </td>
- </tr>
- <tr style='height:26.0pt'>
-  <td width=139 style='width:103.9pt;border:solid black 1.0pt;border-top:none;
-  padding:5.0pt 5.0pt 5.0pt 5.0pt;height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'>unitcnt </span></p>
-  </div>
-  </td>
-  <td width=143 style='width:107.25pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'> architecturalstyletypeid </span></p>
-  </div>
-  </td>
-  <td width=44 style='width:33.15pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal align=center style='text-align:center;line-height:normal;
-  border:none;padding:0in'><span lang=EN style='font-family:"Calibri",sans-serif'>-1.0</span></p>
-  </div>
-  </td>
- </tr>
- <tr style='height:26.0pt'>
-  <td width=139 style='width:103.9pt;border:solid black 1.0pt;border-top:none;
-  padding:5.0pt 5.0pt 5.0pt 5.0pt;height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'>yardbuildingsqft26 </span></p>
-  </div>
-  </td>
-  <td width=143 style='width:107.25pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'> finishedsquarefeet13 </span></p>
-  </div>
-  </td>
-  <td width=44 style='width:33.15pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal align=center style='text-align:center;line-height:normal;
-  border:none;padding:0in'><span lang=EN style='font-family:"Calibri",sans-serif'>1.0</span></p>
-  </div>
-  </td>
- </tr>
- <tr style='height:26.0pt'>
-  <td width=139 style='width:103.9pt;border:solid black 1.0pt;border-top:none;
-  padding:5.0pt 5.0pt 5.0pt 5.0pt;height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'>taxamount </span></p>
-  </div>
-  </td>
-  <td width=143 style='width:107.25pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal style='line-height:normal;border:none;padding:0in;
-  padding-bottom:0in;border-bottom:0in none black'><span lang=EN
-  style='font-family:"Calibri",sans-serif'> taxvaluedollarcnt </span></p>
-  </div>
-  </td>
-  <td width=44 style='width:33.15pt;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
-  height:26.0pt'>
-  <div style='border:none black 1.0pt;padding:0in 0in 0in 0in'>
-  <p class=MsoNormal align=center style='text-align:center;line-height:normal;
-  border:none;padding:0in'><span lang=EN style='font-family:"Calibri",sans-serif'>0.95</span></p>
-  </div>
-  </td>
- </tr>
+<table>
+  <tr>
+    <th>Variable1</th>
+    <th>Variable2</th>
+    <th>Corr</th>
+  </tr>
+  <tr>
+    <td>calculatedbathnbr</td>
+    <td>bathroomcnt</td>
+    <td>1.0</td>
+  </tr>
+  <tr>
+    <td>finishedsquarefeet13</td>
+    <td>calculatedfinishedsquarefeet</td>
+    <td>1.0</td>
+  </tr>
+  <tr>
+    <td>finishedsquarefeet15</td>
+    <td>calculatedfinishedsquarefeet</td>
+    <td>1.0</td>
+  </tr>
+  <tr>
+    <td>finishedsquarefeet15</td>
+    <td>finishedsquarefeet12</td>
+    <td>1.0</td>
+  </tr>
+  <tr>
+    <td>finishedsquarefeet50</td>
+    <td>finishedfloor1squarefeet</td>
+    <td>0.97</td>
+  </tr>
+  <tr>
+    <td>finishedsquarefeet6</td>
+    <td>calculatedfinishedsquarefeet</td>
+    <td>1.0</td>
+  </tr>
+  <tr>
+    <td>fullbathcnt</td>
+    <td>bathroomcnt</td>
+    <td>0.99</td>
+  </tr>
+  <tr>
+    <td>fullbathcnt</td>
+    <td>calculatedbathnbr</td>
+    <td>0.99</td>
+  </tr>
+  <tr>
+    <td>poolsizesum</td>
+    <td>finishedsquarefeet15</td>
+    <td>0.91</td>
+  </tr>
+  <tr>
+    <td>rawcensustractandblock</td>
+    <td>fips</td>
+    <td>1.0</td>
+  </tr>
+  <tr>
+    <td>unitcnt</td>
+    <td>architecturalstyletypeid</td>
+    <td>-1.0</td>
+  </tr>
+  <tr>
+    <td>yardbuildingsqft26</td>
+    <td>finishedsquarefeet13</td>
+    <td>1.0</td>
+  </tr>
+  <tr>
+    <td>taxamount</td>
+    <td>taxvaluedollarcnt</td>
+    <td>0.95</td>
+  </tr>
 </table>
-
-</div>
