@@ -39,7 +39,9 @@ Second, we test our data for correlation. Below is a heatmap showing correlation
 
 Programmatically, we identify and remove variables that have correlation of greater than 0.9 and less than -0.9.
 
-<table class=a border=1 cellspacing=0 cellpadding=0 style='border-collapse:
+<div align=center>
+
+<table class=a border=1 cellspacing=0 cellpadding=0 width=326 style='border-collapse:
  collapse;border:none'>
  <tr style='height:20.0pt'>
   <td width=139 style='width:103.9pt;border:solid black 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt;
@@ -418,3 +420,5 @@ Programmatically, we identify and remove variables that have correlation of grea
   </td>
  </tr>
 </table>
+
+</div>
