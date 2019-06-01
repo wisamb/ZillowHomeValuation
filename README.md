@@ -32,8 +32,7 @@ We then proceed with model analysis by splitting the data into training (67%) an
 
 First, the dataset for each year is provided as 2 excel files, transaction data and property attributes. In order to work with the data, we combine the 2 excel files for each year by parcel id. Immediately, our dataset is reduced to 167,888 rows. This is due to the fact that there is far fewer transaction data than property data. 
 
-### Correlation Matrices 
-<i>(performed by teammate)</i>
+### Correlation Analysis <i>(performed by teammate)</i>
   
 Second, we test our data for correlation. Below is a heatmap showing correlation between all 58 variables.
 
