@@ -14,7 +14,7 @@ Imputation of Missing Values
 
 Zillow is a marketplace website for real estate. It provides over 100 million home listings in the U.S. One of the site’s features is to estimate the purchase value of a listed home. In 2017, Zillow hosted a Kaggle competition to determine which factors influence the accuracy of Zillow estimates, known as Zestimate. Zillow accuracy can be summed as follows:
 
-<p style="text-align: center;"><i>Logerror = log(Zestimate) − log(SalePrice)</i></p><br>
+<i>Logerror = log(Zestimate) − log(SalePrice)</i><br>
 
 Our project will determine which features influence the accuracy of Zillow estimates. Since logerror is a continuous response variable, we will use regression models for our analysis.
 
@@ -35,4 +35,4 @@ First, the dataset for each year is provided as 2 excel files, transaction data 
 <b>Correlation Matrices performed by teammate</b>
 Second, we test our data for correlation. Below is a heatmap showing correlation between all 58 variables.
 
-<p style="text-align: center;"><img src="/images/image001.png"></p>
+<img src="/images/image001.png">
