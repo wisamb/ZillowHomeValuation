@@ -134,9 +134,17 @@ The red dotted line marks the 50% cut-off mark. If features have greater than 50
 
 Third, we identify extreme outliers in the data using box plots. The below tables provide examples, such as high bathroom and bedroom counts, or homes with very large or small square footage. These values are programmatically removed from our analysis.  
 
-<div align=center><img src="/images/image005.jpg" width="35%"/></div>
-<div align=center><img src="/images/image006.jpg" width="35%"/></div>
-<div align=center><img src="/images/image007.jpg" width="35%"/></div>
+<div align=center></div>
+<div align=center></div>
+<div align=center</div>
+
+<table>
+  <tr>
+    <th><img src="/images/image005.jpg" width="35%"/></th>
+    <th><img src="/images/image006.jpg" width="35%"/></th>
+    <th><img src="/images/image007.jpg" width="35%"/></th>
+  </tr>
+</table>
 
 Our final dataset contains 148,241 rows and 35 features.
 
