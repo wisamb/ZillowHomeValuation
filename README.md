@@ -181,11 +181,17 @@ The table below summarizes MSE of each model performed. XGBoosted trees had the 
 </table>
 </div>
 
+### Example of *for-loop*
+
+We also use a for-loop that loops through a sequence of numbers to determine key parameters for each model. Below is an example of how looping 1 through 15 for max_depth affected the MSE of random forest. 
+
+<div align=center><img src="/images/image011.jpg"></div>
+
 ## Feature Analysis
 
 Using feature analysis of the XGBoosted trees model, we determine the features most influential to Zillow accuracy. The waterfall plot below shows that longitude, latitude, lotsizesquarefeet, landtaxvaluedollarcnt, and calculatedfinishedsquarefeet are the top 5 variables for Zillow accuracy. These 5 variables are related to location, size of property, and property valuation by the county, which are top factors to influence sales price of a property. It makes sense that Zillow’s algorithm places greater weight on these variables rather than others. 
 
-<div align=center><img src="/images/image012.jpg"></div>
+<div align=center><img src="/images/image012.png"></div>
 
 ## Detailed Roles
 
