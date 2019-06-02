@@ -1,6 +1,6 @@
 # Zillow Home Valuation
 
-This was a school project in which I took the lead by finding several datasets to choose from, providing vision and direction throughout, and assisting a fellow student who was early in the program. Work performed by teammates where noted. All python and Jupyter Notebook files in this repositories are my own work. 
+This was a school project in which I took the lead by finding several datasets to choose from, providing vision and direction throughout, and assisting a fellow student who was early in the program. Work performed by teammates where noted. All python and Jupyter Notebook files in this repositories are my own work.
 
 <b>Programming Languages/Software:</b> Python, Jupyter Notebook <br>
 
@@ -32,10 +32,10 @@ We then proceed with model analysis by splitting the data into training (67%) an
 
 First, the dataset for each year is provided as 2 excel files, transaction data and property attributes. In order to work with the data, we combine the 2 excel files for each year by parcel id. Immediately, our dataset is reduced to 167,888 rows. This is due to the fact that there is far fewer transaction data than property data. 
 
-### Correlation Analysis <i>(performed by teammate)</i>
-  
-Second, we test our data for correlation. Below is a heatmap showing correlation between all 58 variables.
+### Correlation Analysis 
+<i>(performed by teammate)</i>
 
+Second, we test our data for correlation. Below is a heatmap showing correlation between all 58 variables.
 
 <div align=center><img src="/images/image001.png"></div>
 
@@ -120,5 +120,71 @@ After removing highly correlated values, there are 47 variables as shown in the 
 
 <div align=center><img src="/images/image002.png"></div>
 
-<b>Imputation of Missing Values</b><br>
+### Imputation of Missing Values
 
+The bar plots below illustrate the percent missing values by feature for each year.
+
+<div align=center><img src="/images/image003.jpg"></div>
+<div align=center><img src="/images/image003.jpg"></div>
+
+The red dotted line marks the 50% cut-off mark. If features have greater than 50% missing values, those features are excluded from our analysis. This reduces the dataset to 35 total features. For features that have missing values below the 50% cutoff, we use kNN imputation for both continuous and categorical features <i>(performed by teammate)</i>.
+
+### Extreme Values
+<i>(performed by teammate)</i>
+
+Third, we identify extreme outliers in the data using box plots. The below tables provide examples, such as high bathroom and bedroom counts, or homes with very large or small square footage. These values are programmatically removed from our analysis.  
+
+<div align=center><img src="/images/image005.jpg"></div>
+<div align=center><img src="/images/image006.jpg"></div>
+<div align=center><img src="/images/image007.jpg"></div>
+
+## Model Analysis
+
+The table below summarizes MSE of each model performed. XGBoosted trees had the lowest MSE of all the models. 
+
+<div align=center>
+<table>
+  <tr>
+    <th>Model</th>
+    <th>MSE</th>
+  </tr>
+  <tr>
+    <td>SVM<br><i>(performed by teammate)</i></td>
+    <td>0.00275331</td>
+  </tr>
+  <tr>
+    <td>kNN<br><i>(performed by teammate)</i></td>
+    <td>0.00122146</td>
+  </tr>
+  <tr>
+    <td>Multi-Layer Perceptron</td>
+    <td>0.00120851</td>
+  </tr>
+  <tr>
+    <td>Linear Regression</td>
+    <td>0.00120085</td>
+  </tr>
+  <tr>
+    <td>Random Forest</td>
+    <td>0.00117538</td>
+  </tr>
+  <tr>
+    <td>Gradient Boosted Trees</td>
+    <td>0.00117330</td>
+  </tr>
+  <tr>
+    <td>XGBoosted Trees</td>
+    <td>0.00116985</td>
+  </tr>
+</table>
+</div>
+
+## Feature Analysis
+
+Using feature analysis of the XGBoosted trees model, we determine the features most influential to Zillow accuracy. The waterfall plot below shows that longitude, latitude, lotsizesquarefeet, landtaxvaluedollarcnt, and calculatedfinishedsquarefeet are the top 5 variables for Zillow accuracy. These 5 variables are related to location, size of property, and property valuation by the county, which are top factors to influence sales price of a property. It makes sense that Zillow’s algorithm places greater weight on these variables rather than others. 
+
+<div align=center><img src="/images/image012.jpg"></div>
+
+## Detailed Roles
+
+My contribution consisted of feature analysis of XGBoosted trees, model analysis by Linear Regression, Multi-Layer Pereptron, Random Forest, Gradient Boosted trees, XGBoosted trees, and  plots of missing values by feature.
