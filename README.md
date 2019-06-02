@@ -195,7 +195,7 @@ Using feature analysis of the XGBoosted trees model, we determine the features m
 
 ## Detailed Roles
 
-My contribution consisted of: <br> 
+My specific technical contributions consisted of: <br> 
 feature analysis of XGBoosted trees <br>
 model analysis by Linear Regression, Multi-Layer Pereptron, Random Forest, Gradient Boosted trees, XGBoosted trees <br>
 plots of missing values by feature
