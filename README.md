@@ -11,6 +11,7 @@ Exploratory Analysis<br>
 Imputation of Missing Values
 
 Data files can be found <a href="https://www.kaggle.com/c/zillow-prize-1/data" target="_blank">here</a>.
+
 ## Introduction
 
 Zillow is a real estate marketplace website. It provides over 100 million home listings in the U.S. One of the site’s features is to estimate the purchase value of a listed home. In 2017, Zillow hosted a Kaggle competition to determine which factors influence the accuracy of Zillow estimates, known as Zestimate. Zillow accuracy can be summed as follows:
