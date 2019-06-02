@@ -1,6 +1,6 @@
 # Zillow Home Valuation
 
-This was a school project in which I took the lead by finding several datasets to choose from, providing vision and direction throughout, and assisting a fellow student who was early in the program. Work performed by teammates where noted. All python and Jupyter Notebook files in this repositories are my own work.
+This was a school project in which I took the lead by finding several datasets to choose from, providing vision and direction throughout, and assisting a fellow student who was early in the program. Work performed by teammates are noted. All python and Jupyter Notebook files in this repositories are my own work.
 
 <b>Programming Languages/Software:</b> Python, Jupyter Notebook <br>
 
@@ -12,7 +12,7 @@ Imputation of Missing Values
 
 ## Introduction
 
-Zillow is a marketplace website for real estate. It provides over 100 million home listings in the U.S. One of the site’s features is to estimate the purchase value of a listed home. In 2017, Zillow hosted a Kaggle competition to determine which factors influence the accuracy of Zillow estimates, known as Zestimate. Zillow accuracy can be summed as follows:
+Zillow is a real estate marketplace website. It provides over 100 million home listings in the U.S. One of the site’s features is to estimate the purchase value of a listed home. In 2017, Zillow hosted a Kaggle competition to determine which factors influence the accuracy of Zillow estimates, known as Zestimate. Zillow accuracy can be summed as follows:
 
 <div align=center><i>Logerror = log(Zestimate) − log(SalePrice)</i></div><br>
 
@@ -24,9 +24,9 @@ The data provided includes real estate transactions from 1/1/2016 to 9/15/2017 f
 
 ## Approach 
 
-Highly correlated variables, columns with greater than 50% missing values, and extreme values, defined as greater than 3 standard deviations from the mean are removed from the dataset. Imputation of missing values is performed for the remaining missing values. In addition, we are interested in the accuracy of the algorithm and less interested if the algorithm underestimates or overestimates the SalePrice. Therefore, we use absolute of logerror to run our models.
+Highly correlated variables, columns with greater than 50% missing values, and extreme values (defined as greater than 3 standard deviations) from the mean are removed from the dataset. Imputation of missing values is performed for the remaining missing values. In addition, we are interested in the accuracy of the algorithm and less interested if the algorithm underestimates or overestimates the SalePrice. Therefore, we use absolute of logerror to run our models.
 
-We then proceed with model analysis by splitting the data into training (67%) and test (33%) datasets. We analyze 9 different models: k-NN, Linear Regression, LogReg Classification, Perceptron Learning, Neural Networks, SVMs and Kernel Method, Random Forest Decision Trees, Gradient Boosted Decision Trees, and XGBoosted Trees. For each model, a programmatic search is used to find the best parameters, and trial-and-error is used to fine tune the parameters. We use model accuracy, measured by Mean Squared-Error (MSE), to determine the best model and conduct feature analysis on that model. Feature analysis determined which features are most influential to Zillow accuracy.
+We then proceed with model analysis by splitting the data into training (67%) and test (33%) sets. We analyze 7 different models: kNN, SVM, Linear Regression, Multi-Layer Perceptron, Random Forest, Gradient Boosted trees, and XGBoosted trees. For each model, a programmatic search using a *for-loop* is used to find the best parameters, and trial-and-error is used to fine tune the parameters. We use model accuracy, measured by Mean Squared-Error (MSE), to determine the best model and conduct feature analysis on that model. Feature analysis determined which features are most influential to Zillow accuracy.
 
 ## Exploratory Analysis
 
@@ -138,6 +138,8 @@ Third, we identify extreme outliers in the data using box plots. The below table
 <div align=center><img src="/images/image006.jpg"></div>
 <div align=center><img src="/images/image007.jpg"></div>
 
+Our final dataset contains 148,241 rows and 35 features.
+
 ## Model Analysis
 
 The table below summarizes MSE of each model performed. XGBoosted trees had the lowest MSE of all the models. 
@@ -187,4 +189,7 @@ Using feature analysis of the XGBoosted trees model, we determine the features m
 
 ## Detailed Roles
 
-My contribution consisted of feature analysis of XGBoosted trees, model analysis by Linear Regression, Multi-Layer Pereptron, Random Forest, Gradient Boosted trees, XGBoosted trees, and  plots of missing values by feature.
+My contribution consisted of: <br> 
+feature analysis of XGBoosted trees <br>
+model analysis by Linear Regression, Multi-Layer Pereptron, Random Forest, Gradient Boosted trees, XGBoosted trees <br>
+plots of missing values by feature
