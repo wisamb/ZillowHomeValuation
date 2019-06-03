@@ -2,7 +2,7 @@
 
 This was a school project in which I took the lead by finding several datasets to choose from, providing vision and direction throughout, and assisting a fellow student who was early in the program. Work performed by teammates are noted. All python and Jupyter Notebook files in this repositories are my own work.
 
-<b>Programming Languages/Software:</b> Python, Jupyter Notebook <br>
+<b>Programming Languages/Software:</b> Jupyter Notebook, Python, scikit-learn <br>
 
 <b>Skills Used:</b> <br>
 Ensemble Trees<br> 
