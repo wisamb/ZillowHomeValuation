@@ -31,7 +31,7 @@ First, the dataset for each year is provided as 2 excel files, transaction data 
 
 Second, we test our data for correlation. Below is a heatmap showing correlation between all 58 variables.
 
-<div align=center><img src="/images/image001.png" width="60%"/></div>
+<div align=center><img src="/images/image001.jpg" width="60%"/></div>
 
 Programmatically, we identify and remove variables that have correlation of greater than 0.9 and less than -0.9.
 
@@ -112,7 +112,7 @@ Programmatically, we identify and remove variables that have correlation of grea
 
 After removing highly correlated values, there are 47 variables as shown in the heatmap below.
 
-<div align=center><img src="/images/image002.png" width="60%"/></div>
+<div align=center><img src="/images/image002.jpg" width="60%"/></div>
 
 ### Imputation of Missing Values
 
@@ -189,7 +189,7 @@ We also use a for-loop that loops through a sequence of numbers to determine key
 
 Using feature analysis of the XGBoosted trees model, we determine the features most influential to Zillow accuracy. The waterfall plot below shows that longitude, latitude, lotsizesquarefeet, landtaxvaluedollarcnt, and calculatedfinishedsquarefeet are the top 5 variables for Zillow accuracy. These 5 variables are related to location, size of property, and property valuation by the county, which are top factors to influence sales price of a property. It makes sense that Zillow’s algorithm places greater weight on these variables rather than others. 
 
-<div align=center><img src="/images/image012.png" width="70%"/></div>
+<div align=center><img src="/images/image012.jpg" width="70%"/></div>
 
 ## Detailed Roles
 
