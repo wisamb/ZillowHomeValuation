@@ -1,6 +1,6 @@
 # Zillow Home Valuation
 
-This was a school project in which I took the lead by finding several datasets to choose from, providing vision and direction throughout, and assisting a fellow student who was early in the program. Work performed by teammates are noted. All python and Jupyter Notebook files in this repositories are my own work.
+This was a school project in which I took the lead by finding several datasets to choose from, providing vision and direction throughout, and assisting a fellow student who was early in the program. Work performed by teammates are noted. My contributions where there is no notes and at the end of this report. All python and Jupyter Notebook files in this repositories are my own work.
 
 Data files can be found <a href="https://www.kaggle.com/c/zillow-prize-1/data" target="_blank">here</a>.
 
