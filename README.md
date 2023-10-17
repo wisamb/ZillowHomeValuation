@@ -8,7 +8,7 @@ Zillow is a real estate marketplace website. It provides over 100 million home l
 
 <div align=center><i>Logerror = log(Zestimate) − log(SalePrice)</i></div><br>
 
-Our project will determine which features influence the accuracy of Zillow estimates. Since logerror is a continuous response variable, we will use regression models for our analysis.
+This project will determine which features influence the accuracy of Zillow estimates. Since logerror is a continuous response variable, we use regression models for the analysis.
 
 ## Dataset and Metric
 
@@ -22,12 +22,11 @@ We then proceed with model analysis by splitting the data into training (67%) an
 
 ## Exploratory Analysis
 
-First, the dataset for each year is provided as 2 excel files, transaction data and property attributes. In order to work with the data, we combine the 2 excel files for each year by parcel id. Immediately, our dataset is reduced to 167,888 rows. This is due to the fact that there is far fewer transaction data than property data. 
+First, the dataset for each year is provided as 2 excel files, transaction data and property attributes. In order to work with the data, we combine the 2 excel files for each year by parcel id. Immediately, the dataset is reduced to 167,888 rows. This is due to the fact that there is far fewer transaction data than property data. 
 
 ### Correlation Analysis 
-<i>(performed by teammate)</i>
 
-Second, we test our data for correlation. Below is a heatmap showing correlation between all 58 variables.
+Second, we test the data for correlation. Below is a heatmap showing correlation between all 58 variables.
 
 <div align=center><img src="/images/image001.jpg" width="60%"/></div>
 
@@ -119,10 +118,9 @@ The bar plots below illustrate the percent missing values by feature for each ye
 <div align=center><img src="/images/image003.jpg" width="75%"/></div>
 <div align=center><img src="/images/image003.jpg" width="75%"/></div>
 
-The red dotted line marks the 50% cut-off mark. If features have greater than 50% missing values, those features are excluded from our analysis. This reduces the dataset to 35 total features. For features that have missing values below the 50% cutoff, we use kNN imputation for both continuous and categorical features <i>(performed by teammate)</i>.
+The red dotted line marks the 50% cut-off mark. If features have greater than 50% missing values, those features are excluded from our analysis. This reduces the dataset to 35 total features. For features that have missing values below the 50% cutoff, we use kNN imputation for both continuous and categorical features.
 
 ### Extreme Values
-<i>(performed by teammate)</i>
 
 Third, we identify extreme outliers in the data using box plots. The below tables provide examples, such as high bathroom and bedroom counts, or homes with very large or small square footage. These values are programmatically removed from our analysis.  
 
@@ -147,11 +145,9 @@ The table below summarizes MSE of each model performed. XGBoosted trees had the 
     <th>MSE</th>
   </tr>
   <tr>
-    <td>SVM<br><i>(performed by teammate)</i></td>
     <td>0.00275331</td>
   </tr>
   <tr>
-    <td>kNN<br><i>(performed by teammate)</i></td>
     <td>0.00122146</td>
   </tr>
   <tr>
